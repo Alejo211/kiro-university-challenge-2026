@@ -128,7 +128,7 @@ export const signs = {
       'Hoy es ideal para la meditación y la reflexión.',
       'Una ayuda inesperada te salva de un problema.',
       'Sé más empático con los demás.',
-      'Tu creatividad艺术ica está en su punto máximo.'
+      'Tu creatividad artística está en su punto máximo.'
     ]
   }
 };

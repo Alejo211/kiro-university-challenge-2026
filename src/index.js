@@ -27,9 +27,26 @@ program
     const signData = signs[sign];
     const phrase = getRandomPhrase(sign);
 
-    console.log(chalk.green(`${signData.emoji} ${signData.name}`));
-    console.log(chalk.yellow(phrase));
-    process.exit(0);
+    let spinnerInterval;
+    const spinnerChars = ['✨', '💫', '🌟', '💫'];
+
+    console.log('\n');
+
+    spinnerInterval = setInterval(() => {
+      process.stdout.write(`\r${spinnerChars[0]} Loading your horoscope...`);
+      spinnerChars.push(spinnerChars.shift());
+    }, 250);
+
+    setTimeout(() => {
+      clearInterval(spinnerInterval);
+      process.stdout.write('\r');
+      console.log(chalk.magenta('⭐️✨🌟✨⭐️✨🌟✨⭐️✨🌟✨⭐️'));
+      console.log(chalk.yellow.bold(`${signData.emoji} ${signData.name}`));
+      console.log(chalk.cyan(phrase));
+      console.log(chalk.magenta('⭐️✨🌟✨⭐️✨🌟✨⭐️✨🌟✨⭐️'));
+      console.log('\n');
+      process.exit(0);
+    }, 1000);
   });
 
 program.parse();

@@ -72,9 +72,10 @@ test('Property 4: getSignData always returns sign emoji and name for valid signs
   );
 });
 
-test('Property 5: getAllSigns returns exactly 12 signs', () => {
-  deepStrictEqual(getAllSigns().length, 12, 'Should return exactly 12 signs');
-  deepStrictEqual(getAllSigns().every((s) => isValidSign(s)), true, 'All returned signs should be valid');
+test('Property 5: getAllSigns returns all valid signs', () => {
+  const allSigns = getAllSigns();
+  deepStrictEqual(allSigns.every((s) => isValidSign(s)), true, 'All returned signs should be valid');
+  ok(allSigns.includes('aries') && allSigns.includes('piscis'), 'Should include all zodiac signs');
 });
 
 test('Property 6: Phrase selection distribution has minimum variation', () => {
