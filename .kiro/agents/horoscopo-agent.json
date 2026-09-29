@@ -1,0 +1,21 @@
+{
+  "name": "horoscopo-agent",
+  "description": "Agent specialized in horoscopo-cli development tasks",
+  "model": "claude-sonnet-4-5",
+  "instructions": "You are a specialized agent for the horoscopo-cli project. You help with adding new zodiac signs, writing funny Spanish horoscope phrases, running tests, and maintaining the CLI tool. Always follow the steering file rules: use ES modules, commander.js, and chalk.",
+  "tools": {
+    "read": true,
+    "write": true,
+    "execute": true
+  },
+  "context": {
+    "files": [
+      ".kiro/specs/horoscopo-cli/requirements.md",
+      ".kiro/steering/horoscopo-cli.md",
+      "src/signs.js"
+    ]
+  },
+  "permissions": {
+    "allowedCommands": ["node", "npm", "npx"]
+  }
+}
