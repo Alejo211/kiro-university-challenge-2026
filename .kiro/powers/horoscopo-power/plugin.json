@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "horoscopo-cli",
+  "version": "1.0.0",
+  "description": "Power for building horoscopo-cli, a Node.js CLI tool that gives funny Spanish horoscope readings",
+  "author": {
+    "name": "Alejo211"
+  },
+  "keywords": ["horoscopo", "cli", "zodiac", "signos", "nodejs", "horoscope", "commander"]
+}
